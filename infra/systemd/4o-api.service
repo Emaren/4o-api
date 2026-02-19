@@ -1,0 +1,13 @@
+[Unit]
+Description=4o API service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/4o/4o-api
+ExecStart=/usr/bin/npm run start
+Restart=always
+EnvironmentFile=/var/www/4o/4o-api/.env
+
+[Install]
+WantedBy=multi-user.target

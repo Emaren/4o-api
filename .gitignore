@@ -1,6 +1,10 @@
 __pycache__/
 *.pyc
 .venv/
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
 .env
 .env.*
 .DS_Store

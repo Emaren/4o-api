@@ -1,0 +1,30 @@
+version: 1
+mode: allowlist
+notes:
+  - no_raw_shell: true
+  - approval_required_for_write_or_prod: true
+
+policies:
+  - tool: read_repo
+    approval_required: false
+    allowed_scopes: [repo]
+
+  - tool: run_tests
+    approval_required: false
+    allowed_scopes: [repo]
+
+  - tool: propose_patch
+    approval_required: false
+    allowed_scopes: [repo]
+
+  - tool: apply_patch
+    approval_required: true
+    allowed_scopes: [repo]
+
+  - tool: restart_service
+    approval_required: true
+    allowed_scopes: [vps]
+
+  - tool: nginx_reload
+    approval_required: true
+    allowed_scopes: [vps]

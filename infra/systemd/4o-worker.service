@@ -1,0 +1,9 @@
+[Unit]
+Description=4o Worker service
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/4o/4o-api
+ExecStart=/usr/bin/npm run start:worker
+EnvironmentFile=/var/www/4o/4o-api/.env

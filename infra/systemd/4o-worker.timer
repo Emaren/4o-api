@@ -1,0 +1,10 @@
+[Unit]
+Description=Run 4o Worker every 5 minutes
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=5min
+Unit=4o-worker.service
+
+[Install]
+WantedBy=timers.target

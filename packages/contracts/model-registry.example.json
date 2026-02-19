@@ -1,0 +1,57 @@
+{
+  "defaultCommander": "commander_default",
+  "entries": [
+    {
+      "key": "router_fast",
+      "provider": "openai",
+      "model": "gpt-5-nano",
+      "role": "router",
+      "active": true,
+      "costTier": "cheap"
+    },
+    {
+      "key": "commander_default",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "role": "commander",
+      "active": true,
+      "costTier": "standard"
+    },
+    {
+      "key": "deep_reasoner",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "role": "deep",
+      "active": true,
+      "costTier": "premium"
+    },
+    {
+      "key": "code_agent",
+      "provider": "openai",
+      "model": "gpt-5.2-codex",
+      "role": "code",
+      "active": true,
+      "costTier": "premium"
+    },
+    {
+      "key": "embeddings_default",
+      "provider": "openai",
+      "model": "text-embedding-3-small",
+      "role": "embeddings",
+      "active": true,
+      "costTier": "cheap"
+    },
+    {
+      "key": "shadow_local",
+      "provider": "ollama",
+      "model": "qwen2.5-coder",
+      "role": "shadow",
+      "active": true,
+      "costTier": "free"
+    }
+  ],
+  "budgets": {
+    "maxToolCallsPerRun": 25,
+    "monthlyUsdCap": 250
+  }
+}
