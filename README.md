@@ -32,3 +32,5 @@ Generate a fresh local-only password with a credential generator and load it thr
 **Existing volumes:** Changing `POSTGRES_PASSWORD` in Compose does not rotate a password in an already initialized PostgreSQL volume. For an existing instance, perform a controlled PostgreSQL role-password rotation and update the protected connection secret separately. Do not delete volumes to rotate credentials.
 
 This is a source-only correction for GitGuardian incident #19575130, not proof of credential rotation or production installation.
+
+The API and migration command also require an explicit `DATABASE_URL` supplied through the private runtime environment. Use the matching local database credential for development; a missing or empty value fails startup. Production must use its separately managed database credential.
